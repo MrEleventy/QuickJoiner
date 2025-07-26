@@ -1,8 +1,8 @@
 const ColumnSelectorComponent = ({ headers } : { headers:string[] }) => {
   const content = headers.length === 0
   ? <th>No Headers</th>
-  : <>{headers.map((h) => (
-    <th>{h}</th>
+  : <>{headers.map((h,i) => (
+    <th key={i}>{h}</th>
     ))}</>;
  
   return (

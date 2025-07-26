@@ -7,11 +7,15 @@ const QuickJoinerComponent = () => {
   const [ selectedFile, setSelectedFile] = useState<FileContent<String>>();
   const [ headers, setHeaders] = useState<string[]>([]);
 
-  const handleFileSelect = (file:FileContent<String>) => {
-    console.dir(file);
+  const handleFileSelect = (file:FileContent<String>) => {  
     setSelectedFile(file);
-    const headers = file.content.split('\r\n')[0];
-    setHeaders(headers.split(','));
+    if(file != null){
+      const headers = file.content.split('\r\n')[0];
+      setHeaders(headers.split(','));
+    } else {
+      setHeaders([]);
+    }
+
   }
 
   return (
