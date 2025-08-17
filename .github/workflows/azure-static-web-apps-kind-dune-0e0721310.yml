@@ -29,11 +29,9 @@ jobs:
         with:
           node-version: '20'
 
-      - name: List Directory
-        run: ls-al
-       
       - name: Install dependencies
         run: npm install
+        working-directory: ./quickjoiner.client
 
       - name: Build the project
         run: npm run build          
@@ -63,5 +61,6 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_KIND_DUNE_0E0721310 }}
           action: "close"
+
 
 
