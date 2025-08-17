@@ -53,12 +53,6 @@ const QuickJoinerComponent = () => {
     setResults(combined);
   }
 
-  const reset = () => {
-    setSource1(null);
-    setSource2(null);
-    setResults(null);
-  }
-
   const resultsContent = results == null 
     ? <></> 
     : <>
