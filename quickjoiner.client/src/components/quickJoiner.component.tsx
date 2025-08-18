@@ -68,7 +68,7 @@ const QuickJoinerComponent = () => {
               );
             const today = new Date();
             const dstr = format(today, 'yyyyMMdd');
-            link.setAttribute('download', `joined_results_${dstr}}.csv`);
+            link.setAttribute('download', `joined_results_${dstr}.csv`);
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
